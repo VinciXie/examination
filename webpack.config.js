@@ -17,11 +17,6 @@ function sourceMapLoader(loaderName) {
 const config = {
   devtool: 'cheap-eval-source-map',
 
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
-  },
-
   module: {
     rules: [
 

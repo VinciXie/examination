@@ -7,6 +7,11 @@ const config = {
 
     entry: "./main.js",
 
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'bundle-[hash:4].js'
+    },
+
     module: {
       rules: [
 

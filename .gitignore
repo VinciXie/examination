@@ -1,1 +1,9 @@
+# Mac
+.DS_Store
+
+# My configurations:
+dist
+build
 node_modules
+yarn.lock
+*.log

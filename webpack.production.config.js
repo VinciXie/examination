@@ -1,13 +1,6 @@
-const webpack = require('webpack');
-const path = require('path');
-const fs = require('fs');
-
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common.config');
-
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 
 const proConfig = {
 
@@ -15,18 +8,18 @@ const proConfig = {
     rules: [
 
       {
-          test: /\.css$/,
-          use: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  minimize: true
-                }
-              },
-            ]
-          })
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                minimize: true
+              }
+            },
+          ]
+        })
       },
 
       {

@@ -5,11 +5,13 @@ const config = {
 
     context: path.join(__dirname, 'src'),
 
-    entry: "./main.js",
+    entry: {
+      layout: "./main.js"
+    },
 
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'bundle-[hash:4].js'
+      filename: '[name]-[hash:4].js'
     },
 
     module: {
@@ -23,18 +25,17 @@ const config = {
             ]
         },
 
-
-        // {
-        //   test: /\.(png|jpg|gif)$/,
-        //   use: [
-        //     {
-        //       loader: 'url-loader',
-        //       options: {
-        //         limit: 8192
-        //       }
-        //     }
-        //   ]
-        // }
+        {
+          test: /\.(png|jpg|gif)$/,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 8192
+              }
+            }
+          ]
+        }
 
       ]
     },

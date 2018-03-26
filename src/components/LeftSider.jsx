@@ -15,9 +15,10 @@ class LeftSider extends PureComponent {
         collapsed={this.props.collapsed}
         collapsedWidth={0}
         width={300}
+        className='center-layout'
       >
         <div className='back-classroom'>返回教室</div>
-        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+        <Menu className='left-content' theme="dark" defaultSelectedKeys={['1']} mode="inline">
           <Menu.Item key="1">
             <Icon type="pie-chart" />
             <span>Option 1</span>
@@ -45,6 +46,22 @@ class LeftSider extends PureComponent {
             <Icon type="file" />
             <span>File</span>
           </Menu.Item>
+          <SubMenu
+            key="sub3"
+            title={<span><Icon type="team" /><span>Team</span></span>}
+          >
+            <Menu.Item key="10">Team 1</Menu.Item>
+            <Menu.Item key="11">Team 2</Menu.Item>
+          </SubMenu>
+
+          <SubMenu
+            key="sub4"
+            title={<span><Icon type="team" /><span>Team</span></span>}
+          >
+            <Menu.Item key="12">Team 1</Menu.Item>
+            <Menu.Item key="13">Team 2</Menu.Item>
+          </SubMenu>
+
         </Menu>
       </Sider>
 

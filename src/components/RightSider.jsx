@@ -17,7 +17,7 @@ class RightSider extends PureComponent {
         <div className='right-container-header' onClick={this.props.toggleRight}>
           <Icon type="edit" /> 我的作业 <Icon type="right" />
         </div>
-        <Menu defaultSelectedKeys={['1']} mode="inline">
+        <Menu className='right-container-content' defaultSelectedKeys={['1']} mode="inline">
           <Menu.Item key="1">
             <Icon type="pie-chart" />
             <span>Option 1</span>

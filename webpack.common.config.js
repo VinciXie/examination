@@ -1,17 +1,14 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const config = {
 
-    context: path.join(__dirname, 'src'),
+    context: __dirname,
 
     entry: {
-      layout: "./main.js"
-    },
-
-    output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: '[name]-[hash:4].js'
+      layout: "./src/main.js",
     },
 
     module: {
@@ -25,23 +22,11 @@ const config = {
             ]
         },
 
-        {
-          test: /\.(png|jpg|gif)$/,
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                limit: 8192
-              }
-            }
-          ]
-        }
-
       ]
     },
 
     resolve: {
-      extensions: ['.js', '.jsx', '.json', '.scss', '.css'],
+      extensions: ['.js', '.jsx', '.json', '.scss', '.less', '.css'],
 
       modules: ["node_modules"],
 
@@ -49,11 +34,16 @@ const config = {
 
 
     plugins: [
-        new HtmlWebpackPlugin({
-          inject: true,
-          filename: "index.html",
-          template: "./index.html",
-        }),
+
+      new webpack.HashedModuleIdsPlugin(),
+
+      new HtmlWebpackPlugin({
+        filename: "index.html",
+        template: "./src/index.html",
+      }),
+
+      new DashboardPlugin(),
+
     ]
 }
 

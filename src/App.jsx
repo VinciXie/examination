@@ -4,9 +4,8 @@ import { hot } from 'react-hot-loader'
 import LeftSider from './components/LeftSider'
 import RightSider from './components/RightSider'
 
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Icon } from 'antd';
 const { Header, Content, Sider } = Layout;
-const SubMenu = Menu.SubMenu;
 
 import './app.scss'
 

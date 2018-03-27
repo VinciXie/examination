@@ -17,6 +17,14 @@ function sourceMapLoader(loaderName) {
 const config = {
   devtool: 'cheap-eval-source-map',
 
+  output: {
+
+    path: path.resolve(__dirname, 'dist'),
+
+    filename: 'js/[name]-[hash:4].js',
+
+  },
+
   module: {
     rules: [
 

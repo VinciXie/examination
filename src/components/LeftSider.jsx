@@ -40,26 +40,12 @@ class LeftSider extends PureComponent {
             title={<span><Icon type="team" /><span>Team</span></span>}
           >
             <Menu.Item key="6">Team 1</Menu.Item>
+            <Menu.Item key="7">Team 2</Menu.Item>
             <Menu.Item key="8">Team 2</Menu.Item>
-          </SubMenu>
-          <Menu.Item key="9">
-            <Icon type="file" />
-            <span>File</span>
-          </Menu.Item>
-          <SubMenu
-            key="sub3"
-            title={<span><Icon type="team" /><span>Team</span></span>}
-          >
-            <Menu.Item key="10">Team 1</Menu.Item>
-            <Menu.Item key="11">Team 2</Menu.Item>
-          </SubMenu>
-
-          <SubMenu
-            key="sub4"
-            title={<span><Icon type="team" /><span>Team</span></span>}
-          >
+            <Menu.Item key="9">Team 1</Menu.Item>
+            <Menu.Item key="10">Team 3</Menu.Item>
+            <Menu.Item key="11">Team 3</Menu.Item>
             <Menu.Item key="12">Team 1</Menu.Item>
-            <Menu.Item key="13">Team 2</Menu.Item>
           </SubMenu>
 
         </Menu>
